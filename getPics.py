@@ -31,7 +31,7 @@ print 'Found %s images' % len(images)
 for url in images:
  r = requests.get(url)
  #enter path that you're running script form and that pics will get downloaded tocd 
- f = open("/home/honeycutt/Documents/Python Scripts/pictures/%s" % url.split('/')[-1], 'w')
+ f = open("<ENTER DIRECTOR PATH HERE!!!>/%s" % url.split('/')[-1], 'w')
  f.write(r.content)
  f.close()
  print 'Downloaded %s' % url
