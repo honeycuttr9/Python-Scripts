@@ -54,15 +54,15 @@ driver.quit()
 
 #send text message
 #change variables to reflect yours for twilio and your cell phone number
-account_sid = 'ACea81d5c8a1664d54803d397a7eb90930'
-auth_token = '859ede92e9427647b894d4707f05f92a'
+account_sid = '<Enter account SID from twilio>'
+auth_token = '<Enter authentication token from twilio>'
 client = Client(account_sid, auth_token)
 
 message = client.messages \
     .create(
         body = output,
-        from_ = '+12565408378',
-        to = '+18285572245'
+        from_ = '+1<# provided from twilio>',
+        to = '+1<cell # to send message to>'
 )
 
 print(message.sid)
