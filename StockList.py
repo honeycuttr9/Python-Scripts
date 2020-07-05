@@ -65,11 +65,11 @@ def get_nyse_data():
         get_stock_info(url, html_soup)
 #add data to text file
 def to_text_file_company_name(self, arr):
-    with open(r'C:\Users\rhone\Desktop\company_names.txt', 'w+') as filehandle:
+    with open(r'C:\path\to\company_names.txt', 'w+') as filehandle:
         filehandle.writelines("%s\n" % i for i in arr)
 
 def to_text_file_ticker_sym(self, arr):
-    with open(r'C:\Users\rhone\Desktop\ticker_sym.txt', 'w+') as filehandle:
+    with open(r'C:\path\to\ticker_sym.txt', 'w+') as filehandle:
         filehandle.writelines("%s\n" % i for i in arr)
 
 def does_exist(file, string):
@@ -88,13 +88,6 @@ def main():
 
     to_text_file_company_name(company_name)
     to_text_file_ticker_sym(ticker_sym)
-
-    #print(does_exist(r'C:\Users\rhone\Desktop\company_names.txt', "Apple"))
-    #print(does_exist(r'C:\Users\rhone\Desktop\ticker_sym.txt', "ABEQ"))
-    #print(ticker_sym.__contains__('YELP'))
-    #print(ticker_sym.__contains__('QD'))
-    #print(company_name.__contains__('Phillips'))
-    #print(ticker_sym.__contains__('NACP'))
 
     print(company_name)
     print(ticker_sym)
